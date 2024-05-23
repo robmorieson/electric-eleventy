@@ -1,0 +1,11 @@
+@import '_reset.css';
+@import '_base.css';
+
+.content {
+  display: grid;
+  place-content: center;
+  min-height: 100vh;
+  max-width: 48rem;
+  margin: 0 auto;
+  padding: 1.5rem;
+}
