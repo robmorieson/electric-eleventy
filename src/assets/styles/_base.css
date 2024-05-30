@@ -1,11 +1,13 @@
 :root {
-  --bg-body: rgb(30 41 59);
-  --text-primary: #93c5fd;
+  --bg-body: #1a3548;
+  --bg-hr: #a3feff;
+  --text-primary: #d3d6da;
+  --text-link-primary: #a3feff;
+  --text-link-primary-hover: #00cfd1;
 }
 
 body {
-  font-family: "Noto Sans", sans-serif;
-  font-optical-sizing: auto;
+  font-family: "Lato", sans-serif;
   font-weight: 400;
   font-style: normal;
   line-height: 1.5;
@@ -14,13 +16,46 @@ body {
 }
 
 h1 {
-  font-size: 2rem;
+  /* Clamp values generated using https://clamp.font-size.app/ */
+  /* 1.95rem @ 375px | 2.5rem @ 992px  */
+  font-size: clamp(1.95rem, 1.6157rem + 1.4263vw, 2.5rem);
+  font-weight: 700;
   margin-bottom: 2rem;
   line-height: 1.25;
+}
+
+h2 {
+  /* Clamp values generated using https://clamp.font-size.app/ */
+  /* 1.25rem @ 375px | 1.85rem @ 992px  */
+  font-size: clamp(1.25rem, 0.8853rem + 1.5559vw, 1.85rem);
+  margin-bottom: 2rem;
+  font-weight: 300;
 }
 
 p {
   font-size: 1.5rem;
   margin-bottom: 2rem;
-  font-weight: 300;
+}
+
+@media screen and (max-width: 992px) {
+  p {
+    font-size: 1rem;
+  }
+}
+
+hr {
+  width: 20%;
+  height: 2px;
+  border: none;
+  background: var(--bg-hr);
+  margin: 0 auto 2rem auto;
+}
+
+a {
+  color: var(--text-link-primary);
+  text-decoration-skip-ink: auto;
+}
+
+a:hover {
+  color: var(--text-link-primary-hover);
 }
