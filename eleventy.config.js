@@ -7,7 +7,13 @@ export default function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("src/assets/images");
 
   eleventyConfig.addPlugin(lightningCSS);
-  eleventyConfig.addPlugin(EleventyVitePlugin);
+  eleventyConfig.addPlugin(EleventyVitePlugin, {
+    viteOptions: {
+      build: {
+        assetsInlineLimit: 0,
+      },
+    },
+  });
   eleventyConfig.addPlugin(pluginWebc, {
     components: "src/includes/**/*.webc",
   });

@@ -6,12 +6,7 @@
     <title>Electric Animals | Rob Morieson</title>
     <link rel="stylesheet" href="assets/styles/main.css" webc:keep />
     <link rel="preconnect" href="https://fonts.googleapis.com" webc:keep />
-    <link
-      rel="preconnect"
-      href="https://fonts.gstatic.com"
-      crossorigin
-      webc:keep
-    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin webc:keep />
     <link
       href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap"
       rel="stylesheet"
@@ -22,16 +17,9 @@
       content="Building online experiences that are engaging,
       accessible, and optimised for performance"
     />
-    <link rel="icon" href="/assets/images/icon.png" type="image/png" />
+    <link rel="icon" type="image/png" href="/assets/images/icon.png" />
     <link rel="apple-touch-icon" href="/assets/images/icon.png" />
-    <script type="module">
-      if (!("anchorName" in document.documentElement.style)) {
-        import("https://unpkg.com/@oddbird/css-anchor-positioning");
-      }
-    </script>
-  </head>
-  <body>
-    <div @html="this.content"></div>
     <script type="module" src="assets/scripts/main.js" webc:keep></script>
-  </body>
+  </head>
+  <body @html="this.content"></body>
 </html>

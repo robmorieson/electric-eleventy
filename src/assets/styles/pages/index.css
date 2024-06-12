@@ -31,7 +31,7 @@
 }
 
 .text-melbourne {
-  anchor-name: --text-melbourne;
+  anchor-name: --anchor-acknowledgement;
   position: relative;
   background: transparent;
   color: inherit;
@@ -53,11 +53,10 @@
 }
 
 #popover-acknowledgement {
-  position-anchor: --text-melbourne;
-  left: anchor(--text-melbourne left);
-  bottom: anchor(--text-melbourne top);
+  left: anchor(--anchor-acknowledgement left);
+  bottom: anchor(--anchor-acknowledgement top);
   @media screen and (max-width: 768px) {
-    top: calc(anchor(--text-melbourne bottom) + var(--popover-close-height));
+    top: calc(anchor(--anchor-acknowledgement bottom) + var(--popover-close-height));
     bottom: auto;
     left: 0;
   }

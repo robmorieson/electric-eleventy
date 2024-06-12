@@ -1,42 +1,31 @@
+// Polyfill for browser that don't yet support the CSS anchor positioning API
+if (!("anchorName" in document.documentElement.style)) {
+  import("https://unpkg.com/@oddbird/css-anchor-positioning");
+}
+
 class Popover {
   constructor(button) {
     this.button = button;
-    this.popover = document.querySelector(
-      "#" + button.getAttribute("popovertarget")
-    );
+    this.popover = document.querySelector("#" + button.getAttribute("popovertarget"));
     this.isMouseOverPopover = false;
     this.listenersAdded = false;
     this.init();
   }
 
   init() {
-    this.button.addEventListener("mouseenter", () =>
-      this.handleButtonMouseEnter()
-    );
+    this.button.addEventListener("mouseenter", () => this.handleButtonMouseEnter());
   }
 
   addPopoverListeners() {
-    this.button.addEventListener("mouseleave", () =>
-      this.handleButtonMouseLeave()
-    );
-    this.popover.addEventListener("mouseenter", () =>
-      this.handlePopoverMouseEnter()
-    );
-    this.popover.addEventListener("mouseleave", () =>
-      this.handlePopoverMouseLeave()
-    );
+    this.button.addEventListener("mouseleave", () => this.handleButtonMouseLeave());
+    this.popover.addEventListener("mouseenter", () => this.handlePopoverMouseEnter());
+    this.popover.addEventListener("mouseleave", () => this.handlePopoverMouseLeave());
   }
 
   removePopoverListeners() {
-    this.button.removeEventListener("mouseleave", () =>
-      this.handleButtonMouseLeave()
-    );
-    this.popover.removeEventListener("mouseenter", () =>
-      this.handlePopoverMouseEnter()
-    );
-    this.popover.removeEventListener("mouseleave", () =>
-      this.handlePopoverMouseLeave()
-    );
+    this.button.removeEventListener("mouseleave", () => this.handleButtonMouseLeave());
+    this.popover.removeEventListener("mouseenter", () => this.handlePopoverMouseEnter());
+    this.popover.removeEventListener("mouseleave", () => this.handlePopoverMouseLeave());
   }
 
   handleButtonMouseEnter() {
@@ -80,6 +69,4 @@ class Popover {
   }
 }
 
-document
-  .querySelectorAll("button[popovertarget]")
-  .forEach((button) => new Popover(button));
+document.querySelectorAll("button[popovertarget]").forEach((button) => new Popover(button));
