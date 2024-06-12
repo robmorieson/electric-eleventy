@@ -1,0 +1,17 @@
+<div id="popover-acknowledgement" popover role="tooltip">
+  <button
+    class="popover-close"
+    popovertarget="popover-acknowledgement"
+    popovertargetaction="hide"
+    aria-label="Close popover"
+  >
+    <icon-info></icon-info>
+    acknowledgement.md
+    <icon-close></icon-close>
+  </button>
+  <p>
+    Melbourne’s Traditional Place name is <em>Naarm</em>. I respect and
+    acknowledge the Wurundjeri Woi-Wurrung people of the Kulin Nation as the
+    Traditional Custodians of the land where I live, work and raise my family.
+  </p>
+</div>

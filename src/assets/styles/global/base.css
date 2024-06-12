@@ -1,0 +1,114 @@
+:root {
+  --bg-body: #1a3548;
+  --bg-hr: #a3feff;
+  --bg-popover: #15232c;
+  --bg-popover-footer: #1a2a35;
+  --bg-popover-close: #132737;
+  --text-primary: #d3d6da;
+  --text-link-primary: #a3feff;
+  --text-link-primary-hover: #00cfd1;
+  --text-popover-primary: #aaaaaa;
+  --text-popover-secondary: #e2effe;
+  --text-popover-link: #1388f9;
+  --text-popover-close: #aaaaaa;
+  --text-popover-close-hover: #fec73c;
+  --border-popover-primary: #103a56;
+  --border-popover-secondary: #122e41;
+  --font-family-primary: "Lato", sans-serif;
+  --font-family-secondary: -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-family-mono: Menlo, Monaco, "Courier New", monospace;
+  --popover-close-height: 2.2rem;
+}
+
+body {
+  font-family: var(--font-family-primary);
+  font-weight: 400;
+  font-style: normal;
+  line-height: 1.5;
+  background: var(--bg-body);
+  color: var(--text-primary);
+}
+
+h1 {
+  /* Clamp values generated using https://clamp.font-size.app/ */
+  /* 1.95rem @ 375px | 2.5rem @ 992px  */
+  font-size: clamp(1.95rem, 1.6157rem + 1.4263vw, 2.5rem);
+  font-weight: 700;
+  margin-bottom: 2rem;
+  line-height: 1.25;
+}
+
+h2 {
+  /* Clamp values generated using https://clamp.font-size.app/ */
+  /* 1.25rem @ 375px | 1.85rem @ 992px  */
+  font-size: clamp(1.25rem, 0.8853rem + 1.5559vw, 1.85rem);
+  margin-bottom: 2rem;
+  font-weight: 300;
+}
+
+p {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+  @media screen and (max-width: 992px) {
+    font-size: 1rem;
+  }
+}
+
+hr {
+  width: 20%;
+  height: 2px;
+  border: none;
+  background: var(--bg-hr);
+  margin: 0 auto 2rem auto;
+}
+
+a {
+  color: var(--text-link-primary);
+  text-decoration-skip-ink: auto;
+}
+
+a:hover {
+  color: var(--text-link-primary-hover);
+}
+
+[popover] {
+  position: absolute;
+  overflow: visible;
+  inset: auto;
+  max-width: 500px;
+  font-family: var(--font-family-mono);
+  background: var(--bg-popover);
+  border: 1px solid var(--border-popover-primary);
+  border-radius: 3px;
+  padding: 0;
+  color: var(--text-popover-primary);
+  p {
+    margin: 0;
+    padding: 1rem 0.75rem;
+    font-size: 0.85rem;
+    line-height: 1.5;
+  }
+  .popover-close {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    gap: 0.625rem;
+    height: var(--popover-close-height);
+    top: calc(var(--popover-close-height) * -1);
+    left: 0;
+    padding: 0 1rem;
+    border: none;
+    font-size: 0.85rem;
+    font-family: var(--font-family-secondary);
+    background: var(--bg-popover-close);
+    color: var(--text-popover-close);
+    cursor: pointer;
+    &:hover {
+      color: var(--text-popover-close-hover);
+    }
+    .close-icon {
+      width: 0.625rem;
+      height: 0.625rem;
+    }
+  }
+}
