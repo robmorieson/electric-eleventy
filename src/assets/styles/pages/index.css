@@ -3,11 +3,11 @@
   --index-content-padding-x: 2rem;
   display: grid;
   place-content: center;
-  text-align: center;
-  min-height: calc(100vh - var(--index-content-padding-y));
-  max-width: 52rem;
   margin: 0 auto;
   padding: var(--index-content-padding-y) var(--index-content-padding-x);
+  max-width: 52rem;
+  min-height: calc(100vh - var(--index-content-padding-y));
+  text-align: center;
   @media screen and (max-width: 992px) {
     --index-content-padding-y: 1rem;
     --index-content-padding-x: 2.5rem;
@@ -17,8 +17,8 @@
     text-wrap: balance;
   }
   p {
-    font-size: 1rem;
     margin-bottom: 0.5rem;
+    font-size: 1rem;
     @media screen and (max-width: 768px) {
       margin-bottom: 1.5rem;
     }
@@ -33,28 +33,28 @@
 #anchor-acknowledgement {
   anchor-name: --anchor-acknowledgement;
   position: relative;
-  background: transparent;
-  color: inherit;
-  border: none;
-  margin: 0;
-  padding: 0;
   cursor: pointer;
+  margin: 0;
+  border: none;
+  background: transparent;
+  padding: 0;
+  color: inherit;
   &::after {
-    content: "";
     position: absolute;
     bottom: -2px;
     left: 0;
-    width: 100%;
-    height: 100%;
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='6' fill='none'%3E%3Cpath stroke='%233c93f9' stroke-width='2' d='M-9 3C-7 .333-5 .333-3 3s4 2.667 6 0S7 .333 9 3s4 2.667 6 0 4-2.667 6 0 4 2.667 6 0 4-2.667 6 0 4 2.667 6 0 4-2.667 6 0 4 2.667 6 0 4-2.667 6 0 4 2.667 6 0 4-2.667 6 0 4 2.667 6 0 4-2.667 6 0 4 2.667 6 0 4-2.667 6 0 4 2.667 6 0 4-2.667 6 0 4 2.667 6 0 4-2.667 6 0 4 2.667 6 0 4-2.667 6 0 4 2.667 6 0 4-2.667 6 0 4 2.667 6 0 4-2.667 6 0 4 2.667 6 0 4-2.667 6 0 4 2.667 6 0'/%3E%3C/svg%3E");
     background-position: bottom left;
     background-repeat: repeat-x;
+    width: 100%;
+    height: 100%;
+    content: "";
   }
 }
 
 #popover-acknowledgement {
-  left: anchor(--anchor-acknowledgement left);
   bottom: anchor(--anchor-acknowledgement top);
+  left: anchor(--anchor-acknowledgement left);
   @media screen and (max-width: 768px) {
     top: calc(anchor(--anchor-acknowledgement bottom) + var(--popover-close-height));
     bottom: auto;
