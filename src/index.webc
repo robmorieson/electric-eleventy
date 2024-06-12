@@ -14,7 +14,6 @@ layout: "base.webc"
     for performance
   </h2>
   <hr />
-  <img src="/assets/images/icon.png" />
   <p>
     Over the last 10 years, I've had the privilege of working with some
     <a target="_blank" rel="me" href="https://read.cv/robmorieson">great companies</a>.
@@ -28,7 +27,7 @@ layout: "base.webc"
     <a target="_blank" rel="me" href="https://github.com/robmorieson/">GitHub</a>,
     <a target="_blank" rel="me" href="https://www.linkedin.com/in/robmorieson/">LinkedIn</a>
     or
-    <a rel="me" target="_blank" href="https://front-end.social/@robmorieson">Mastodon</a>.
+    <a target="_blank" rel="me" href="https://front-end.social/@robmorieson">Mastodon</a>.
   </p>
 </section>
 <popover-acknowledgement></popover-acknowledgement>
