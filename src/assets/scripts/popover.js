@@ -1,6 +1,7 @@
-// Polyfill for browser that don't yet support the CSS anchor positioning API
+// Polyfill for browsers that don't yet support the CSS anchor positioning API
+// https://github.com/oddbird/css-anchor-positioning
 if (!("anchorName" in document.documentElement.style)) {
-  import("https://unpkg.com/@oddbird/css-anchor-positioning");
+  import("@oddbird/css-anchor-positioning");
 }
 
 class Popover {

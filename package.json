@@ -5,7 +5,8 @@
   "type": "module",
   "scripts": {
     "build": "eleventy",
-    "dev": "eleventy --serve"
+    "dev": "eleventy --serve",
+    "preview": "pnpm run build && vite preview"
   },
   "keywords": [],
   "author": "Rob Morieson",
@@ -14,6 +15,10 @@
     "@11ty/eleventy": "3.0.0-alpha.10",
     "@11ty/eleventy-plugin-vite": "^4.0.0",
     "@11ty/eleventy-plugin-webc": "^0.11.2",
-    "@11tyrocks/eleventy-plugin-lightningcss": "^1.4.0"
+    "@11tyrocks/eleventy-plugin-lightningcss": "^1.4.0",
+    "vite": "^5.2.13"
+  },
+  "dependencies": {
+    "@oddbird/css-anchor-positioning": "^0.0.5"
   }
 }
