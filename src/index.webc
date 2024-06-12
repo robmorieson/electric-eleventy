@@ -6,7 +6,7 @@ layout: "base.webc"
   <h1>
     Hi, I'm Rob Morieson,
     <span class="no-wrap">a frontend developer</span> based in
-    <button class="text-melbourne" popovertarget="popover-acknowledgement">Melbourne</button>,
+    <button id="anchor-acknowledgement" popovertarget="popover-acknowledgement">Melbourne</button>,
     Australia
   </h1>
   <h2>
