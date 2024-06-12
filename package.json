@@ -1,17 +1,24 @@
 {
   "name": "electric-eleventy",
-  "version": "1.0.0",
-  "description": "",
+  "version": "1.1.0",
+  "description": "Rob Morieson's personal website, built using Eleventy",
   "type": "module",
   "scripts": {
-    "build": "npx @11ty/eleventy",
-    "dev": "npx @11ty/eleventy --serve"
+    "build": "eleventy",
+    "dev": "eleventy --serve",
+    "preview": "pnpm run build && vite preview"
   },
   "keywords": [],
-  "author": "",
+  "author": "Rob Morieson",
   "license": "ISC",
   "devDependencies": {
     "@11ty/eleventy": "3.0.0-alpha.10",
-    "@11tyrocks/eleventy-plugin-lightningcss": "^1.4.0"
+    "@11ty/eleventy-plugin-vite": "^4.0.0",
+    "@11ty/eleventy-plugin-webc": "^0.11.2",
+    "@11tyrocks/eleventy-plugin-lightningcss": "^1.4.0",
+    "vite": "^5.2.13"
+  },
+  "dependencies": {
+    "@oddbird/css-anchor-positioning": "^0.0.5"
   }
 }

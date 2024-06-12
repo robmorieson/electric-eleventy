@@ -1,0 +1,110 @@
+:root {
+  --bg-body: #1a3548;
+  --bg-hr: #a3feff;
+  --bg-popover: #15232c;
+  --bg-popover-close: #132737;
+  --text-primary: #d3d6da;
+  --text-link-primary: #a3feff;
+  --text-link-primary-hover: #00cfd1;
+  --text-popover-primary: #aaaaaa;
+  --text-popover-close: #aaaaaa;
+  --text-popover-close-hover: #fec73c;
+  --border-popover-primary: #103a56;
+  --font-family-primary: "Lato", sans-serif;
+  --font-family-secondary: -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-family-mono: Menlo, Monaco, "Courier New", monospace;
+  --popover-close-height: 2.2rem;
+}
+
+body {
+  background: var(--bg-body);
+  color: var(--text-primary);
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.5;
+  font-family: var(--font-family-primary);
+}
+
+h1 {
+  margin-bottom: 2rem;
+  font-weight: 700;
+  /* Clamp values generated using https://clamp.font-size.app/ */
+  /* 1.95rem @ 375px | 2.5rem @ 992px  */
+  font-size: clamp(1.95rem, 1.6157rem + 1.4263vw, 2.5rem);
+  line-height: 1.25;
+}
+
+h2 {
+  margin-bottom: 2rem;
+  font-weight: 300;
+  /* Clamp values generated using https://clamp.font-size.app/ */
+  /* 1.25rem @ 375px | 1.85rem @ 992px  */
+  font-size: clamp(1.25rem, 0.8853rem + 1.5559vw, 1.85rem);
+}
+
+p {
+  margin-bottom: 2rem;
+  font-size: 1.5rem;
+  @media screen and (max-width: 992px) {
+    font-size: 1rem;
+  }
+}
+
+hr {
+  margin: 0 auto 2rem auto;
+  border: none;
+  background: var(--bg-hr);
+  width: 20%;
+  height: 2px;
+}
+
+a {
+  color: var(--text-link-primary);
+  text-decoration-skip-ink: auto;
+}
+
+a:hover {
+  color: var(--text-link-primary-hover);
+}
+
+[popover] {
+  position: absolute;
+  inset: auto;
+  border: 1px solid var(--border-popover-primary);
+  border-radius: 3px;
+  background: var(--bg-popover);
+  padding: 0;
+  max-width: 500px;
+  overflow: visible;
+  color: var(--text-popover-primary);
+  font-family: var(--font-family-mono);
+  p {
+    margin: 0;
+    padding: 1rem 0.75rem;
+    font-size: 0.85rem;
+    line-height: 1.5;
+  }
+  .popover-close {
+    display: flex;
+    position: absolute;
+    top: calc(var(--popover-close-height) * -1);
+    left: 0;
+    align-items: center;
+    gap: 0.625rem;
+    cursor: pointer;
+    border: none;
+    background: var(--bg-popover-close);
+    padding: 0 1rem;
+    height: var(--popover-close-height);
+    color: var(--text-popover-close);
+    font-size: 0.85rem;
+    font-family: var(--font-family-secondary);
+    &:hover {
+      color: var(--text-popover-close-hover);
+    }
+    .close-icon {
+      width: 0.625rem;
+      height: 0.625rem;
+    }
+  }
+}
